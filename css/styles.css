@@ -1,0 +1,96 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  /* width: 100%; */
+  width: 40px;
+  height: 40px;
+  height: auto;
+  display: block;
+
+}
+
+html,
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  min-width: 375px;
+  max-width: 1440px;
+
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+/* Block components */
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #969FAD;
+}
+
+div > button {
+width: 42px;
+height: 42px;
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+text-align: center;
+letter-spacing: 0.175px;
+/* Medium Gray */
+color: #7C8798;
+background: #262E38;
+border-radius: 50%;
+}
+
+button[type=submit] {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.86667px;
+  color: #FFFFFF;
+  background: #FC7614;
+  border-radius: 22.5px;
+
+  width: 279px;
+  height: 45px;
+}
+
+.rating-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border-radius: 20px;
+  width: 327px;
+  height: 360px;
+}
+
+.button-group-ratings {
+  display: flex;
+  justify-content: center;
+}
+
