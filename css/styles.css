@@ -22,15 +22,6 @@ body {
   min-width: 375px;
   max-width: 1440px;
 
-  /* background-color: #7C8798; */
-
-  /* position: relative; */
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content:space-between;
-  align-items: center; */
-
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -61,12 +52,7 @@ body {
   /* padding: 24px; */
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-/* .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-} */
-
-button[type=submit]:checked {
+.flipCard {
   transform: rotateY(180deg);
 }
 
@@ -91,7 +77,6 @@ button[type=submit]:checked {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* background-color: pink; */
 
   transform: rotateY(180deg);
 
@@ -135,6 +120,13 @@ h1 {
 
   background: #262E38;
   border-radius: 22.5px;
+
+  width: 168px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -155,10 +147,8 @@ font-style: normal;
 font-weight: 700;
 font-size: 14px;
 line-height: 24px;
-/* identical to box height, or 171% */
 text-align: center;
 letter-spacing: 0.175px;
-/* Medium Gray */
 color: #7C8798;
 background: #262E38;
 border-radius: 50%;
@@ -172,11 +162,16 @@ button[type=submit] {
   line-height: 18px;
   letter-spacing: 1.86667px;
   color: #FFFFFF;
-  background: #FC7614;
+  background-color: #FC7614;
   border-radius: 22.5px;
 
   width: 279px;
   height: 45px;
+}
+
+#submit:hover {
+  color: #FC7614;
+  background-color: #FFFFFF;
 }
 
 .image-circle {

@@ -7,21 +7,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 
-
-  <script src="script.js" defer></script>
+  <script src="scripts.js" defer></script>
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
 </head>
 <body>
 
@@ -46,7 +40,7 @@
           <button type="button" value="5" id="btn5" onclick="rankSelected(btn5,5)">5</button>
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" disabled id="submit" onclick="flipCard()">Submit</button>
        </div> <!-- Rating state end -->
 
       <!-- Thank you state start -->
@@ -55,7 +49,7 @@
         <img src="images/illustration-thank-you.svg" alt="thank you" width="162" height="108" loading="lazy">
 
         <div class="result-container">
-          <p class="results-text">You selected <!-- Add rating here --> out of 5</p>
+          <p class="results-text">You selected <span id="rankResult"></span> out of 5</p>
         </div>
 
         <h1>Thank you!</h1>
