@@ -5,12 +5,9 @@
 }
 
 img {
-  /* width: 100%; */
-  width: 40px;
-  height: 40px;
+  width: 100%;
   height: auto;
   display: block;
-
 }
 
 html,
@@ -25,11 +22,92 @@ body {
   min-width: 375px;
   max-width: 1440px;
 
+  /* background-color: #7C8798; */
+
+  /* position: relative; */
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center; */
+
 }
 
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+
+  width: 327px;
+  height: 360px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  border-radius: 15px;
+
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: calc(-327px / 2);
+  margin-top: 180px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* text-align: center; */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  /* padding: 24px; */
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
+
+button[type=submit]:checked {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.rating-card, .thank-you-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 24px;
+}
+
+.rating-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.thank-you-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: pink; */
+
+  transform: rotateY(180deg);
+
+}
+
+.attribution { 
+  font-size: 11px;
+  text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 p,
-h1 {
+div,
+article,
+h1,h2 {
   margin: 0;
+  padding: 0;
 }
 
 /* Block components */
@@ -42,6 +120,23 @@ h1 {
   color: #FFFFFF;
 }
 
+.thank-you-card img {
+  width: 144px;
+  height: 96px;
+}
+
+.result-container {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  color: #FC7614;
+
+  background: #262E38;
+  border-radius: 22.5px;
+}
+
 p {
   font-style: normal;
   font-weight: 400;
@@ -49,6 +144,9 @@ p {
   line-height: 22px;
   color: #969FAD;
 }
+p.results-text { color: #FC7614;}
+
+p.ty-text {text-align: center;}
 
 div > button {
 width: 42px;
@@ -64,6 +162,7 @@ letter-spacing: 0.175px;
 color: #7C8798;
 background: #262E38;
 border-radius: 50%;
+border: none;
 }
 
 button[type=submit] {
@@ -80,17 +179,36 @@ button[type=submit] {
   height: 45px;
 }
 
-.rating-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  border-radius: 20px;
-  width: 327px;
-  height: 360px;
+.image-circle {
+  width:2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #262E38;
+  position: relative;
+  /* text-align: center; */
 }
+
+.image-circle img {
+  width: 13.96px;
+  height: 13.33px;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -8px; /* Half this element's height */
+  left: 50%;
+  margin-left: -8.5px; /* Half this element's width */
+}
+
+
 
 .button-group-ratings {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  /* margin: 24; */
 }
 
+div > button:hover {
+  color: #FFFFFF;
+  background-color: #7C8798;
+}

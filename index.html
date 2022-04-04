@@ -13,48 +13,58 @@
 <link rel="stylesheet" href="css/styles.css">
 
 
-  <!-- <script src="script.js defer"></script> -->
+  <script src="script.js" defer></script>
   
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
 
   <!-- Rating state start -->
-  <article class="rating-card">
-    <img src="/images/icon-star.svg" alt="star icon" width="40" height="40" loading="lazy">
-    
-    <h1>How did we do?</h1>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="rating-card">
+        <div class="image-circle">
+          <img src="/images/icon-star.svg" alt="star icon" width="40" height="40" loading="lazy">
+        </div>
 
-    <p>Please let us know how we did with your support request. All feedback is appreciated 
-    to help us improve our offering!</p>
+        <h1>How did we do?</h1>
 
-    <div class="button-group-ratings">
-      <button type="button" value="1">1</button>
-      <button type="button" value="2">2</button>
-      <button type="button" value="3">3</button>
-      <button type="button" value="4">4</button>
-      <button type="button" value="5" autofocus>5</button>
-    </div>   
+        <p class="support-question">Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
 
-    <button type="submit">Submit</button>
-  </article> <!-- Rating state end -->
+        <div class="button-group-ratings">
+          <button type="button" value="1" id="btn1" onclick="rankSelected(btn1,1)">1</button>
+          <button type="button" value="2" id="btn2" onclick="rankSelected(btn2,2)">2</button>
+          <button type="button" value="3" id="btn3" onclick="rankSelected(btn3,3)">3</button>
+          <button type="button" value="4" id="btn4" onclick="rankSelected(btn4,4)">4</button>
+          <button type="button" value="5" id="btn5" onclick="rankSelected(btn5,5)">5</button>
+        </div>
 
-  <!-- Thank you state start -->
+        <button type="submit">Submit</button>
+       </div> <!-- Rating state end -->
 
-  <article class="thank-you-card">
-    <h2>You selected <!-- Add rating here --> out of 5</h2>
+      <!-- Thank you state start -->
 
-    <h1>Thank you!</h1>
+      <div class="thank-you-card">
+        <img src="images/illustration-thank-you.svg" alt="thank you" width="162" height="108" loading="lazy">
 
-    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-    don’t hesitate to get in touch!</p>
-  </article>  <!-- Thank you state end -->
+        <div class="result-container">
+          <p class="results-text">You selected <!-- Add rating here --> out of 5</p>
+        </div>
+
+        <h1>Thank you!</h1>
+
+        <p class="ty-text">We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+      </div>  <!-- Thank you state end -->
+    </div>
+  </div>
 
   
   <div class="attribution">
