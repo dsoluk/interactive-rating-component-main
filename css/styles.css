@@ -10,6 +10,14 @@ img {
   display: block;
 }
 
+p,
+div,
+article,
+h1,h2 {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   font-family: 'Overpass', sans-serif;
@@ -20,9 +28,10 @@ body {
   margin: 0;
 
   min-width: 375px;
-  max-width: 1440px;
-
 }
+
+/* STRUCTURAL to allow for card to
+-------------------------------- */
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
@@ -41,20 +50,25 @@ body {
   margin-top: 180px;
 }
 
+@media screen and (min-width: 992px) {
+  .flip-card {
+    width: 412px;
+    height: 416px;
+    margin-left: -206px;
+    margin-top: 208px;
+  }
+}
+
 /* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  /* text-align: center; */
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  /* padding: 24px; */
 }
 
-.flipCard {
-  transform: rotateY(180deg);
-}
+.flipCard { transform: rotateY(180deg);}  /*called from js*/
 
 /* Position the front and back side */
 .rating-card, .thank-you-card {
@@ -66,6 +80,11 @@ body {
   padding: 24px;
 }
 
+@media screen and (min-width: 992px) {
+  .rating-card, .thank-you-card {
+    padding: 32px;
+  }
+}
 .rating-card {
   display: flex;
   flex-direction: column;
@@ -79,8 +98,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  transform: rotateY(180deg);
-
+  transform: rotateY(180deg);  /* make the back side */
 }
 
 .attribution { 
@@ -88,15 +106,44 @@ body {
   text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-p,
-div,
-article,
-h1,h2 {
-  margin: 0;
-  padding: 0;
+/* Block components for Cards*/
+
+
+.image-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #262E38;
+  position: relative;
 }
 
-/* Block components */
+@media screen and (min-width: 992px) {
+  .image-circle {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.image-circle img {
+  width: 16.75px;
+  height: 16px;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -8px; /* Half this element's height */
+  left: 50%;
+  margin-left: -8.375px; /* Half this element's width */
+}
+
+@media screen and (min-width: 992px) {
+  .image-circle img {
+    width: 13.96px;
+    height: 13.33px;
+    margin-top: -6.66px; /* Half this element's height */
+    margin-left: -7px; /* Half this element's width */
+  }
+}
 
 h1 {
   font-style: normal;
@@ -106,9 +153,100 @@ h1 {
   color: #FFFFFF;
 }
 
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #969FAD;
+}
+
+@media screen and (min-width: 992px) {
+  p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.button-group-ratings {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  font-style: normal;
+  font-weight: 700;
+}
+
+div > button {
+width: 42px;
+height: 42px;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.175px;
+color: #7C8798;
+background: #262E38;
+border-radius: 50%;
+border: none;
+}
+
+@media screen and (min-width: 992px) {
+  div > button {
+    width: 51px;
+height: 51px;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+}
+button[type=submit] {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.86667px;
+  color: #FFFFFF;
+  background-color: #FC7614;
+  border-radius: 22.5px;
+
+  width: 279px;
+  height: 45px;
+}
+@media screen and (min-width: 992px) {
+  button[type=submit] {
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 2px;
+
+    width: 341px;
+  }
+}
+
+#submit:hover {
+  color: #FC7614;
+  background-color: #FFFFFF;
+}
+
+div > button:hover {
+  color: #FFFFFF;
+  background-color: #7C8798;
+}
+
 .thank-you-card img {
   width: 144px;
   height: 96px;
+}
+
+@media screen and (min-width: 992px) {
+  .thank-you-card img {
+    width: 162px;
+    height: 108px;
+  }
 }
 
 .result-container {
@@ -130,81 +268,12 @@ h1 {
   align-items: center;
 }
 
-p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  color: #969FAD;
+@media screen and (min-width: 992px) {
+  .result-container {
+    width: 193px;
+  }
 }
+
 p.results-text { color: #FC7614;}
 
 p.ty-text {text-align: center;}
-
-div > button {
-width: 42px;
-height: 42px;
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 24px;
-text-align: center;
-letter-spacing: 0.175px;
-color: #7C8798;
-background: #262E38;
-border-radius: 50%;
-border: none;
-}
-
-button[type=submit] {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 1.86667px;
-  color: #FFFFFF;
-  background-color: #FC7614;
-  border-radius: 22.5px;
-
-  width: 279px;
-  height: 45px;
-}
-
-#submit:hover {
-  color: #FC7614;
-  background-color: #FFFFFF;
-}
-
-.image-circle {
-  width:2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  border: none;
-  background-color: #262E38;
-  position: relative;
-  /* text-align: center; */
-}
-
-.image-circle img {
-  width: 13.96px;
-  height: 13.33px;
-
-  position: absolute;
-  top: 50%;
-  margin-top: -8px; /* Half this element's height */
-  left: 50%;
-  margin-left: -8.5px; /* Half this element's width */
-}
-
-
-
-.button-group-ratings {
-  display: flex;
-  justify-content: space-evenly;
-  /* margin: 24; */
-}
-
-div > button:hover {
-  color: #FFFFFF;
-  background-color: #7C8798;
-}
