@@ -29,7 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Mobile-Rating / Front](screenshot-mobile-front.png)
+![Mobile-Thankyou / Back](screenshot-mobile-front.png)
 
 Still working on it so stay tuned.
 
