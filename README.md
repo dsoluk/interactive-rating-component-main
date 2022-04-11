@@ -32,8 +32,6 @@ Users should be able to:
 ![Mobile-Rating / Front](screenshot-mobile-front.png)
 ![Mobile-Thankyou / Back](screenshot-mobile-front.png)
 
-Still working on it so stay tuned.
-
 ### Links
 
 - Solution URL: [https://github.com/dsoluk/interactive-rating-component-main](https://github.com/dsoluk/interactive-rating-component-main)
