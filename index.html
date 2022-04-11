@@ -19,12 +19,11 @@
 </head>
 <body>
 
-  <!-- Rating state start -->
-  <div class="flip-card">
+  <main class="flip-card">
     <div class="flip-card-inner">
       <div class="rating-card">
         <div class="image-circle">
-          <img src="images/icon-star.svg" alt="star icon" width="40" height="40" loading="lazy">
+          <img src="images/icon-star.svg" alt="">
         </div>
 
         <h1>How did we do?</h1>
@@ -32,21 +31,23 @@
         <p class="support-question">Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!</p>
 
-        <div class="button-group-ratings">
-          <button type="button" value="1" id="btn1" onclick="rankSelected(btn1,1)">1</button>
-          <button type="button" value="2" id="btn2" onclick="rankSelected(btn2,2)">2</button>
-          <button type="button" value="3" id="btn3" onclick="rankSelected(btn3,3)">3</button>
-          <button type="button" value="4" id="btn4" onclick="rankSelected(btn4,4)">4</button>
-          <button type="button" value="5" id="btn5" onclick="rankSelected(btn5,5)">5</button>
-        </div>
-
-        <button type="submit" disabled id="submit" onclick="flipCard()">Submit</button>
-       </div> <!-- Rating state end -->
-
-      <!-- Thank you state start -->
+        <form class="button-group-ratings" action="" method="post">
+          <input type="radio" id="1" name="radios" value="1">
+          <label id="lbl1" for="1">1</label>
+          <input type="radio" id="2" name="radios" value="2">
+          <label id="lbl2" for="2">2</label>
+          <input type="radio" id="3" name="radios" value="3">
+          <label id="lbl3" for="3">3</label>
+          <input type="radio" id="4" name="radios" value="4">
+          <label id="lbl4" for="4">4</label>
+          <input type="radio" id="5" name="radios" value="5">
+          <label id="lbl5" for="5">5</label>
+        </form>
+        <button type="button" disabled id="submit">Submit</button>
+       </div>
 
       <div class="thank-you-card">
-        <img src="images/illustration-thank-you.svg" alt="thank you" width="162" height="108" loading="lazy">
+        <img src="images/illustration-thank-you.svg" alt="thank you">
 
         <div class="result-container">
           <p class="results-text">You selected <span id="rankResult"></span> out of 5</p>
@@ -56,14 +57,14 @@
 
         <p class="ty-text">We appreciate you taking the time to give a rating. If you ever need more support, 
         don’t hesitate to get in touch!</p>
-      </div>  <!-- Thank you state end -->
-    </div>
-  </div>
 
+      </div>
+    </div>
+  </main>
   
-  <div class="attribution">
+  <!-- <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">DSoluk</a>.
-  </div>
+  </footer> -->
 </body>
 </html>

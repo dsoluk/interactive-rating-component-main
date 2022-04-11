@@ -18,6 +18,16 @@ h1,h2 {
   padding: 0;
 }
 
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input, textarea, select {
+  -webkit-box-sizing: border-box;
+  box-sizing: border;
+}
+
 html,
 body {
   font-family: 'Overpass', sans-serif;
@@ -28,9 +38,12 @@ body {
   margin: 0;
 
   min-width: 375px;
+  max-width: 1440px;
+
+  background-color: #131518;
 }
 
-/* STRUCTURAL to allow for card to
+/* STRUCTURAL to allow for card to flip
 -------------------------------- */
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -43,11 +56,11 @@ body {
   background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
   border-radius: 15px;
 
-  position: relative;
+  position: fixed;
   left: 50%;
   top: 50%;
-  margin-left: calc(-327px / 2);
-  margin-top: 180px;
+  margin-left: -163.5px;
+  margin-top: -180px;
 }
 
 @media screen and (min-width: 992px) {
@@ -55,7 +68,7 @@ body {
     width: 412px;
     height: 416px;
     margin-left: -206px;
-    margin-top: 208px;
+    margin-top: -208px;
   }
 }
 
@@ -68,7 +81,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.flipCard { transform: rotateY(180deg);}  /*called from js*/
+.flipTheCard { transform: rotateY(180deg);}  /*called from js*/
 
 /* Position the front and back side */
 .rating-card, .thank-you-card {
@@ -106,8 +119,8 @@ body {
   text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-/* Block components for Cards*/
-
+/* Block components for Cards
+-------------------------------*/
 
 .image-circle {
   width: 2.5rem;
@@ -185,44 +198,63 @@ button {
   font-weight: 700;
 }
 
-div > button {
-width: 42px;
-height: 42px;
-font-size: 14px;
-line-height: 24px;
-text-align: center;
-letter-spacing: 0.175px;
-color: #7C8798;
-background: #262E38;
-border-radius: 50%;
-border: none;
+/* Styling for the 5 Radio buttons
+---------------------------------- */
+
+input[type="radio"] {
+	opacity: 0;
+	width: 0;
+  position: fixed;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.175px;
+  color: #7C8798;
+  background: #262E38;
+  border-radius: 50%;
+  padding: calc(42px - 24px - 24px / 2) 14px;
 }
 
 @media screen and (min-width: 992px) {
-  div > button {
-    width: 51px;
-height: 51px;
+  input[type="radio"] + label {
+    /* width: 51px; */
+    /* height: 51px; */
     font-size: 16px;
+    /* line-height:  */
     letter-spacing: 0.2px;
+    padding: calc(51px - 24px - 24px / 2) 24px;
   }
 }
-button[type=submit] {
+
+input[type="radio"]:hover + label {
+    color: #FFFFFF;
+    background-color: #7C8798;
+  }
+
+/* Styling for the SUBMIT button
+----------------------------- */
+
+#submit {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 1.86667px;
   color: #FFFFFF;
   background-color: #FC7614;
   border-radius: 22.5px;
-
+  text-transform: uppercase;
   width: 279px;
   height: 45px;
 }
+
 @media screen and (min-width: 992px) {
-  button[type=submit] {
+  #submit {
     font-size: 15px;
     line-height: 19px;
     letter-spacing: 2px;
-
     width: 341px;
   }
 }
@@ -232,10 +264,8 @@ button[type=submit] {
   background-color: #FFFFFF;
 }
 
-div > button:hover {
-  color: #FFFFFF;
-  background-color: #7C8798;
-}
+/* Thank you card styling
+--------------------- */
 
 .thank-you-card img {
   width: 144px;

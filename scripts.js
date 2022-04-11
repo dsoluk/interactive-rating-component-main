@@ -1,27 +1,41 @@
-function rankSelected (btn,val) {
-    // change color and background color of the button
-    let rankObj = document.getElementById(btn.id);
+let submitBtn = document.getElementById("submit");
 
-    rankObj.style.backgroundColor =  "#FC7614";
-    rankObj.style.color = "#FFFFFF";
+//event listener for the main form of radio buttons for user to select rank
 
-    // activate the submit button so can be clicked
+document.forms[0].addEventListener('change', function(e) {
 
-    let submitBtn = document.getElementById("submit");
+  let target = e.target;
+  let rankBtn = document.querySelector("#lbl" + target.id);
 
-    submitBtn.disabled = false;
+  // change colours on rank buttons to show selected
 
-    // update result text with selected rank value
+  rankBtn.style.backgroundColor =  "#FC7614";
+  rankBtn.style.color = "#FFFFFF";
 
-    let resultText = document.getElementById("rankResult");
+  // activate the submit button
+
+  submitBtn.disabled = false;
+
+  // update result text with selected rank value
+
+  let resultText = document.getElementById("rankResult");
     
-    resultText.innerHTML = val;
-}
+  resultText.innerText = target.id;
+
+});
+
+//-------------------------------------------------------------
+
+// to flip the card showing thank you with rank selected...relies on listener=submitBtn
 
 function flipCard() {
   // flip the card to show thank you and results upon click
   
   let flipObj = document.querySelector(".flip-card .flip-card-inner");
   
-  flipObj.classList.toggle("flipCard");
+  flipObj.classList.toggle("flipTheCard");
 }
+
+// event listener for submit button.
+
+submitBtn.addEventListener("click", flipCard);
