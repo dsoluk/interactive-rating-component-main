@@ -233,6 +233,7 @@ input[type="radio"] + label {
 input[type="radio"]:hover + label {
     color: #FFFFFF;
     background-color: #7C8798;
+    cursor: pointer;
   }
 
 /* Styling for the SUBMIT button
@@ -262,6 +263,7 @@ input[type="radio"]:hover + label {
 #submit:hover {
   color: #FC7614;
   background-color: #FFFFFF;
+  cursor: pointer;
 }
 
 /* Thank you card styling
