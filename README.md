@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile-Rating / Front](screenshot-mobile-front.png)
-![Mobile-Thankyou / Back](screenshot-mobile-front.png)
+![Mobile-Rating / Front](screenshot-desktop-front.png)
+![Mobile-Thankyou / Back](screenshot-desktop-back.png)
 
 ### Links
 
@@ -46,12 +46,15 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - js - flip card and button control
+- this version used radio buttons and event listeners
 
 ### What I learned
 
 My first attempt at a challenge with JavaScript so lots of learning there.
 
 Despite having done several Newbie challenges I am just starting to feel comfy with centering elements...disappointed that it took this long. Likely more work on this via more work and focus.
+
+Reworked this after feedback from Grace who pointed out that I was supposed to use radio buttons. I also looked HTML naming and structure (too many / unnecessary divs) at her advice and warnings on solution submission.
 
 ### Continued development
 
@@ -67,4 +70,4 @@ More JS for sure.
 
 ## Acknowledgments
 
-Once again, Morten from LinkedIn Learning. His vids are great!
+Once again, Morten from LinkedIn Learning. His vids are great! Grace from FrontEnd Mentor too!
