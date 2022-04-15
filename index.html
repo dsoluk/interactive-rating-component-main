@@ -26,25 +26,31 @@
           <img src="images/icon-star.svg" alt="">
         </div>
 
-        <h1>How did we do?</h1>
+        <h1 id="question">How did we do?</h1>
 
-        <p class="support-question">Please let us know how we did with your support request. All feedback is appreciated 
-        to help us improve our offering!</p>
+        <!-- <p class="support-question">Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p> -->
 
         <form class="button-group-ratings" action="#" method="post">
-          <input type="radio" id="1" name="radios" value="1">
-          <label id="lbl1" for="1">1</label>
-          <input type="radio" id="2" name="radios" value="2">
-          <label id="lbl2" for="2">2</label>
-          <input type="radio" id="3" name="radios" value="3">
-          <label id="lbl3" for="3">3</label>
-          <input type="radio" id="4" name="radios" value="4">
-          <label id="lbl4" for="4">4</label>
-          <input type="radio" id="5" name="radios" value="5">
-          <label id="lbl5" for="5">5</label>
+          <fieldset aria-labelledby="question">
+            <legend>Please let us know how we did with your support request. All feedback is appreciated 
+              to help us improve our offering!</legend>
+            <input type="radio" id="1" name="radios" value="1">
+            <label id="lbl1" for="1">1</label>
+            <input type="radio" id="2" name="radios" value="2">
+            <label id="lbl2" for="2">2</label>
+            <input type="radio" id="3" name="radios" value="3">
+            <label id="lbl3" for="3">3</label>
+            <input type="radio" id="4" name="radios" value="4">
+            <label id="lbl4" for="4">4</label>
+            <input type="radio" id="5" name="radios" value="5">
+            <label id="lbl5" for="5">5</label>
+          
+            <button type="button" disabled id="submit">Submit</button>
+          
+          </fieldset>
         </form>
-        <button type="button" disabled id="submit">Submit</button>
-       </div>
+      </div>
 
       <div class="thank-you-card">
         <img src="images/illustration-thank-you.svg" alt="thank you">
@@ -55,7 +61,7 @@
 
         <h1>Thank you!</h1>
 
-        <p class="ty-text">We appreciate you taking the time to give a rating. If you ever need more support, 
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
         don’t hesitate to get in touch!</p>
 
       </div>
