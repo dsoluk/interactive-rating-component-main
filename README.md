@@ -43,10 +43,10 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - js - flip card and button control
 - this version used radio buttons and event listeners
+- tried to make more responsive to devices widths following comments from @grace-snow
 
 ### What I learned
 
@@ -54,11 +54,15 @@ My first attempt at a challenge with JavaScript so lots of learning there.
 
 Despite having done several Newbie challenges I am just starting to feel comfy with centering elements...disappointed that it took this long. Likely more work on this via more work and focus.
 
-Reworked this after feedback from Grace who pointed out that I was supposed to use radio buttons. I also looked HTML naming and structure (too many / unnecessary divs) at her advice and warnings on solution submission.
+Reworked this after feedback from Grace who pointed out that I was supposed to use radio buttons. I also looked HTML naming and structure (too many / unnecessary divs) at her advice and warnings on solution submission. Grace was nice to provide more comments so addressed those mostly. Still need to work on avoiding setting specific width / height.
 
 ### Continued development
 
 More JS for sure.
+
+How to use aria in forms...
+
+How to make card sizing more generic (i.e. w/o using width and height)
 
 ### Useful resources
 
@@ -70,4 +74,4 @@ More JS for sure.
 
 ## Acknowledgments
 
-Once again, Morten from LinkedIn Learning. His vids are great! Grace from FrontEnd Mentor too!
+Once again, Morten from LinkedIn Learning. His vids are great! @grace-snow from FrontEnd Mentor too!
